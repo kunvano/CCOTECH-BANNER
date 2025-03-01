@@ -1,1 +1,183 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CCOTECH Banner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .banner {
+            width: 100%;
+            max-width: 3000px;
+            height: auto;
+            aspect-ratio: 3 / 1;
+            background: linear-gradient(to right, #E6F0FA, #FFFFFF);
+            border: 5px solid #003087;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+        .tagline {
+            font-size: 60px;
+            font-weight: bold;
+            color: #003087;
+            margin: 10px 0;
+        }
+        .slogan {
+            font-size: 40px;
+            color: #000000;
+            margin: 5px 0;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            height: 650px;
+        }
+        .left-section, .right-section {
+            width: 48%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .left-section {
+            background-color: #F5F5F5;
+        }
+        .right-section {
+            background-color: #E6F0FA;
+        }
+        .section-title {
+            font-size: 50px;
+            font-weight: bold;
+            color: #003087;
+            margin-bottom: 20px;
+        }
+        .service-list, .contact-list {
+            font-size: 30px;
+            color: #000000;
+            list-style: none;
+            padding-left: 0;
+        }
+        .service-list li, .contact-list li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        .service-list li:before {
+            content: "•";
+            color: #003087;
+            font-size: 30px;
+            position: absolute;
+            left: 0;
+        }
+        .contact-list li:before {
+            content: "➤";
+            color: #003087;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+        }
+        .call-to-action {
+            font-size: 35px;
+            font-style: italic;
+            color: #003087;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #003087;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .tagline { font-size: 30px; }
+            .slogan { font-size: 20px; }
+            .section-title { font-size: 25px; }
+            .service-list, .contact-list { font-size: 16px; }
+            .call-to-action { font-size: 18px; }
+            .footer { font-size: 16px; }
+            .content {
+                flex-direction: column;
+                padding: 20px;
+                height: auto;
+            }
+            .left-section, .right-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="banner">
+        <div class="header">
+            <svg class="logo" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="#003087"/>
+                <text x="50" y="55" font-size="20" fill="#FFFFFF" text-anchor="middle">CCOTECH</text>
+            </svg>
+            <div class="tagline">Clemsons Computer and Technology</div>
+            <div class="slogan">Your one-stop shop for computer and technology solutions in Nairobi!</div>
+        </div>
+        <div class="content">
+            <div class="left-section">
+                <div class="section-title">Cyber Services</div>
+                <ul class="service-list">
+                    <li>Printing, Photocopying, Scanning, Lamination</li>
+                    <li>Typing, CV Writing, Document Formatting</li>
+                    <li>Graphic Design and Branding</li>
+                    <li>Business Cards, Posters, Internet Browsing</li>
+                    <li>eCitizen Services (SHA, NSSF, HELB, Passport, Good Conduct)</li>
+                    <li>iTax KRA PIN Registration and Filing Returns</li>
+                </ul>
+                <div class="section-title">Branding</div>
+                <ul class="service-list">
+                    <li>Flyers, Brochures, Banners, Stickers</li>
+                </ul>
+                <div class="section-title">Electronic Devices Available</div>
+                <ul class="service-list">
+                    <li>Chargers, Extensions, Power Banks, Memory Cards, Flash Drives</li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <div class="section-title">Contact Us</div>
+                <ul class="contact-list">
+                    <li>[Insert Phone Number]</li>
+                    <li>[Insert Email Address]</li>
+                    <li>[Insert Physical Address/Location in Nairobi]</li>
+                </ul>
+                <ul class="contact-list">
+                    <li>Follow us on: [Insert Social Media Handles]</li>
+                    <li>Visit us at: [Insert Website URL]</li>
+                    <li>Open: Mon-Sat, 8 AM - 6 PM</li>
+                </ul>
+                <div class="call-to-action">We are committed to providing you with fast, reliable, and affordable services. Visit us today!</div>
+            </div>
+        </div>
+        <div class="footer">
+            Your trusted tech partner in Nairobi
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.service-list li').forEach(item => {
+            item.addEventListener('mouseover', () => { item.style.color = '#003087'; });
+            item.addEventListener('mouseout', () => { item.style.color = '#000000'; });
+        });
+    </script>
+</body>
+</html>
